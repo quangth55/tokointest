@@ -19,9 +19,7 @@ protocol Request: URLRequestConvertible {
     var endpoint: String { get }
     
     var httpMethod: HTTPMethod { get }
-    
-    var additionalHeaders: HTTPHeaders { get }
-        
+            
     var params: Parameters { get }
     
     var parameterEncoding: ParameterEncoding { get }
@@ -45,15 +43,6 @@ extension Request {
     
     var parameterEncoding: ParameterEncoding {
         return JSONEncoding.default
-    }
-    
-    var additionalHeaders: HTTPHeaders {
-        return [:]
-    }
-    
-    var defaultHeaders: HTTPHeaders {
-        
-        return [:]
     }
     
     var urlPath: String {
@@ -113,11 +102,6 @@ extension Request {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = httpMethod.rawValue
         urlRequest = try parameterEncoding.encode(urlRequest, with: params)
-        var headers = defaultHeaders
-        for (key, val) in additionalHeaders {
-            headers[key] = val
-        }
-        urlRequest.allHTTPHeaderFields = headers
         return urlRequest
     }
     

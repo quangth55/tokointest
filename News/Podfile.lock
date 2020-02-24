@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.9.0)
   - ObjectMapper (3.5.1)
+  - PagingKit (1.12.0)
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -14,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - ObjectMapper
+  - PagingKit
   - RxCocoa
   - RxSwift
   - SDWebImage
@@ -22,6 +24,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - ObjectMapper
+    - PagingKit
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -30,11 +33,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  PagingKit: 3aa34f2547edad4809da888d5fa1b930456753f0
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SDWebImage: 46a7f73228f84ce80990c786e4372cf4db5875ce
 
-PODFILE CHECKSUM: 670151cf484ed21439cea4ce4fa9cb3eead52865
+PODFILE CHECKSUM: e079bc82279f7446e54bf56045b8cb89aca01f5a
 
 COCOAPODS: 1.8.4

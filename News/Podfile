@@ -12,5 +12,6 @@ target 'News' do
     pod 'ObjectMapper'
     pod 'Alamofire'
     pod 'SDWebImage'
+    pod 'PagingKit'
 
 end

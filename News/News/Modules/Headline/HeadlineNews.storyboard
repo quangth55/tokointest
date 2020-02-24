@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KGd-rP-QCo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Headline News View Controller-->
+        <scene sceneID="Faa-iS-R38">
+            <objects>
+                <viewController id="KGd-rP-QCo" customClass="HeadlineNewsViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jde-As-L31">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eSF-NH-7yp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="280" id="6Sw-Mc-BwN" customClass="NewsCell" customModule="News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="280"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Sw-Mc-BwN" id="1sK-vw-L0t">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDa-gl-eLz">
+                                                    <rect key="frame" x="16" y="10" width="382" height="64"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cMi-eY-cdm">
+                                                    <rect key="frame" x="16" y="84" width="382" height="191"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="cMi-eY-cdm" secondAttribute="height" multiplier="2:1" id="Pp6-HE-3YY"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="cMi-eY-cdm" secondAttribute="bottom" constant="5" id="43H-6k-QBE"/>
+                                                <constraint firstItem="cMi-eY-cdm" firstAttribute="top" secondItem="jDa-gl-eLz" secondAttribute="bottom" constant="10" id="48h-Im-ngy"/>
+                                                <constraint firstItem="cMi-eY-cdm" firstAttribute="leading" secondItem="1sK-vw-L0t" secondAttribute="leading" constant="16" id="AkL-RQ-UjN"/>
+                                                <constraint firstItem="jDa-gl-eLz" firstAttribute="top" secondItem="1sK-vw-L0t" secondAttribute="top" constant="10" id="DNk-v0-vs2"/>
+                                                <constraint firstItem="jDa-gl-eLz" firstAttribute="leading" secondItem="1sK-vw-L0t" secondAttribute="leading" constant="16" id="aeE-vI-F7S"/>
+                                                <constraint firstAttribute="trailing" secondItem="jDa-gl-eLz" secondAttribute="trailing" constant="16" id="hRc-8S-1Sr"/>
+                                                <constraint firstAttribute="trailing" secondItem="cMi-eY-cdm" secondAttribute="trailing" constant="16" id="sCK-Ba-um9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newsImage" destination="cMi-eY-cdm" id="rxB-7X-76S"/>
+                                            <outlet property="titleLabel" destination="jDa-gl-eLz" id="Jb5-EQ-OBc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fSo-O2-e88" firstAttribute="trailing" secondItem="eSF-NH-7yp" secondAttribute="trailing" id="Ef9-9M-cxB"/>
+                            <constraint firstItem="fSo-O2-e88" firstAttribute="bottom" secondItem="eSF-NH-7yp" secondAttribute="bottom" id="P7P-nW-PRM"/>
+                            <constraint firstItem="eSF-NH-7yp" firstAttribute="top" secondItem="fSo-O2-e88" secondAttribute="top" id="Udy-Ct-XJG"/>
+                            <constraint firstItem="eSF-NH-7yp" firstAttribute="leading" secondItem="fSo-O2-e88" secondAttribute="leading" id="k4N-LN-gH7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fSo-O2-e88"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="eSF-NH-7yp" id="MQL-lY-wjo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5S-Jb-UeC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.014492753623188" y="-30.133928571428569"/>
+        </scene>
+    </scenes>
+</document>
